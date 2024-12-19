@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .reviews {
+            color: darkolivegreen;
+            font-size: 300%;
+            padding: 0cm 0.5cm;
+            text-decoration:underline; 
+         }
+
+         .reviews2 {
+            color: darkolivegreen;
+            font-size: 225%;
+            padding: 0cm 0.5cm;
+            text-decoration: underline; 
+         }
+         .greenwords{
+            color: darkolivegreen;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 140%;
+            text-align: center;
+
+          }
+          .smallergreen{
+            color:darkolivegreen;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 100%;
+            text-align: center;
+          }
+
+          .cake{
+            width:1140px;
+            height:60px;      
+          }
+
+          .header{
+            color:cornsilk;
+            background-color: darkolivegreen;
+            font-family:'Courier New', Courier, monospace;
+            margin: -0.5cm -0.5cm -1cm -0.5cm;
+            padding:0.5cm 0.5cm;           
+         }
+
+         .boxes{
+            background-color:whitesmoke;
+            border: thin solid black;
+            margin: 20%;
+         }
+
+         .picSame{
+            width: 300px;
+            height: 250px;
+            overflow:hidden;
+            border-radius: 3%;
+            margin: 0.5%;  
+         }
+
+         .styled-button2 {
+            background-color: white;
+            color: darkolivegreen; 
+            font-size: 15px; /* Larger text */
+            font-weight: bold;
+            padding: 5px 10px; /* Bigger button size */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-align: center; /* Center text */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        textarea {
+            width: 80%;
+            height:150px;
+            padding: 10px;
+        }
+
+        .table2 {
+            width: 80%; /* Table stretches to 80% of the page */
+            margin: auto; /* Centers the table horizontally */
+            border-collapse: collapse; /* Removes spacing between borders */
+        }
+
+        .td2 { 
+            border: thin solid darkolivegreen; /* Solid black border */
+            padding: 20px; /* Spacing inside the cell */
+            text-align: center; /* Center aligns content */
+        }
+        
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <h2 class="header" style=" text-align:left;" ><pre>   Holiday Bites                                 <a href="{{ url_for('homepage') }}" style="color: cornflowerblue;">Home</a>     Recipes     Reviews</pre></h2>
+    <br>
+    <h1 class="reviews"><pre>Reviews</pre></h1>
+  <div>
+    <table style="background-color:whitesmoke; margin:5.7%; border-radius: 2%">
+        <tr>
+            <td style="text-align: center;"><img src="{{ url_for('static', filename='images/mostlikedreview.png') }}" alt="most liked review" class="pic1"></td>
+                
+        </tr>
+        <tr>
+            <td class="greenwords"><br>Delicious Christmas Dessert Recipes for a Festive Holiday Season</td> 
+        </tr>
+        <tr>
+            <td class="smallergreen"><br>The holiday season is upon us, and what better way to spread cheer than with delicious Christmas dessert recipes to<br> sweeten up your festivities! Whether you're planning a cozy gathering with loved ones or simply want to indulge in some<br> festive treats, Holiday Bites has got you covered with a mouthwatering array of dessert options to choose from.</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><br><img src="{{ url_for('static', filename='images/chococake.png') }}" alt="chocolate cake" class="pic1"></td>
+            
+        </tr>
+        <tr>
+            <td class="smallergreen"><br>For those who love a classic Christmas cake, Holiday Bites features a selection of delightful options such as log cake,<br> gingerbread cake, and dark forest cake. These decadent desserts are sure to be a hit at any holiday gathering, with<br> their rich flavors and festive decorations adding a touch of magic to your table.
+                If you're more of a fan of baked<br> cheesecakes, look no further than the chocolate orange baked cheesecake recipe. The combination of tangy citrus and<br> luscious chocolate is a match made in dessert heaven, making this a must-try for any cheesecake lover.
+                For those with<br> a sweet tooth, Holiday Bites also contains a variety of cookie recipes including chocolate chip cookies, hazelnut cookies<br> with butter filling, raspberry cheesecake cookies, and gingerbread cookies. These sweet treats are perfect for sharing<br> with friends and family or enjoying on your own with a cup of hot cocoa by the fire.
+                And let's not forget about<br> traditional holiday favorites like eggnog, apple crumble pie, sticky toffee pudding, and Christmas pudding. These<br> comforting desserts are sure to evoke memories of holidays past and create new traditions for years to come.
+                No matter<br> what your dessert preference may be, Holiday Bites has something for everyone this holiday season. So why not treat<br> yourself and your loved ones to a little extra sweetness this Christmas using their delectable dessert recipes? Because<br> after all, 'tis the season to indulge in all things delicious and festive.</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><img src="{{ url_for('static', filename='images/bar.png') }}" alt="chocolate cake" class="pic1" style="height:100px; width:1040px"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><img src="{{ url_for('static', filename='images/likes.png') }}" alt="most liked" class="pic1" style="height:50px; width: 100px;"></td>
+        </tr>
+    
+    </table>
+  </div>
+
+  <h2 class="reviews2"><pre>Recent Reviews</pre></h2>
+  <div style="text-align: center;">
+    <img src="{{ url_for('static', filename='images/box1.png') }}" alt="article 1" class="pic1">
+    <img src="{{ url_for('static', filename='images/box2.png') }}" alt="article 2" class="pic1">
+  </div>
+
+  <div>
+    <br>
+    <table class="table2">
+        <tr>
+            <td class="td2">
+                <h1 class="greenwords">Review</h1>
+                <hr style="width: 50%">
+                <textarea name="Review">Write a review...</textarea>
+                <input type="submit" class="styled-button2">
+            </td>
+        </tr>
+    </table>
+  </div>
+</body>
+</html>

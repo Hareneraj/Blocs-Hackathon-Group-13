@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <title>Document</title>
+    <style>
+        .header{
+            color:cornsilk;
+            background-color: darkolivegreen;
+            font-family:'Courier New', Courier, monospace;
+            margin: -0.5cm -0.5cm -1cm -0.5cm;
+            padding:0.5cm 0.5cm;
+        }
+        .pic1{
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            object-position: center;
+            margin:0.5%;
+            border-radius: 2%;
+        }
+        .pic3{
+            width: 500px;
+            height: 250px;
+            overflow:hidden;
+            object-position: top;
+            margin:0.5%;
+            border-radius: 2%;
+        }
+        .picSame{
+            width: 300px;
+            height: 250px;
+            overflow:hidden;
+            border-radius: 5%;
+            margin: 0.5%;
+        }
+        .title {
+            color:maroon;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            font-size: 400%;
+        }
+        .subs {
+            color:maroon;
+            text-decoration: dotted;
+            font-style: italic;
+            font-size: 200%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .styled-button {
+            background-color: maroon;
+            color: white; 
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .styled-button2 {
+            background-color: antiquewhite;
+            color: black; 
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .footer {
+            color: antiquewhite;
+            font-size: 300%;
+            padding: 1cm 1cm;
+        }
+        .pic4{
+            width: 300px;
+            height: 350px;
+            overflow:hidden;
+            border-radius: 2%;
+            margin: 0.5cm 3cm;
+        }
+        .summary{
+            color:antiquewhite;
+            font-size: 180%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <h2 class="header" style=" text-align:left;" ><pre>   Holiday Bites                                 <a href="{{ url_for('homepage') }}" style="color: cornflowerblue;">Home</a>     Recipes    Reviews</pre></h2>
+    <br>
+
+
+    {% for category, items in categories.items() %}
+        <h2>{{ category }}</h2>
+        <div class="cakes">
+            {% for recipe in items %}
+                <div class="cake-item">
+                    <img src="{{ url_for('static', filename=recipe.image) }}" alt="{{ recipe.title }}">
+                    <h3><b>{{ recipe.title }}</b></h3>
+                    <div class="recipe-item">
+                        <h3><a href="{{ url_for('recipe_details', recipe_id=recipe.id) }}">Click here for Recipe</a></h3>
+                        <p>{{ recipe.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <ul class="nav-links">
+        <li><a href="/add">Add Recipe</a></li>
+    </ul>
+    
+</body>
+</html>

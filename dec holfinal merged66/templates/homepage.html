@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <title>Document</title>
+    <style>
+        .header{
+            color:cornsilk;
+            background-color: darkolivegreen;
+            font-family:'Courier New', Courier, monospace;
+            margin: -0.5cm -0.5cm -1cm -0.5cm;
+            padding:0.5cm 0.5cm;
+        }
+        .pic1{
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            object-position: center;
+            margin:0.5%;
+            border-radius: 2%;
+        }
+        .pic3{
+            width: 500px;
+            height: 250px;
+            overflow:hidden;
+            object-position: top;
+            margin:0.5%;
+            border-radius: 2%;
+        }
+        .picSame{
+            width: 300px;
+            height: 250px;
+            overflow:hidden;
+            border-radius: 5%;
+            margin: 0.5%;
+        }
+        .title {
+            color:maroon;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            font-size: 400%;
+        }
+        .subs {
+            color:maroon;
+            text-decoration: dotted;
+            font-style: italic;
+            font-size: 200%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .styled-button {
+            background-color: maroon;
+            color: white; 
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .styled-button2 {
+            background-color: antiquewhite;
+            color: black; 
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .footer {
+            color: antiquewhite;
+            font-size: 300%;
+            padding: 1cm 1cm;
+        }
+        .pic4{
+            width: 300px;
+            height: 350px;
+            overflow:hidden;
+            border-radius: 2%;
+            margin: 0.5cm 3cm;
+        }
+        .summary{
+            color:antiquewhite;
+            font-size: 180%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <h2 class="header" style=" text-align:left;" ><pre>   Holiday Bites                                 Home     <a href="{{ url_for('recipes_page') }}" style="color: cornflowerblue;">Recipes</a>    <a href="{{ url_for('reviews_page') }}" style="color: cornflowerblue;">Reviews</a>
+    </pre></h2>
+    <br>
+    <div style="text-align: center;">
+        <table style="margin: 15%;">
+            <tr>
+                <td rowspan="2">
+                    <img src="{{ url_for('static', filename='images/picture of food.jpg') }}" alt="Christmas Food" class="pic1">
+                </td>
+                <td> 
+                    <h1 class="title"><pre>Holiday 
+    Bites</pre></h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{{ url_for('static', filename='images/gingerbread.avif') }}" alt="gingerbread cookies" class="pic3">
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <hr style="width: 90%;">
+
+    <h1 class="title" style="text-align: center;"><pre>Delicious Recipes!</pre></h1>
+    <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='images/cakestab.jpg') }}" alt="cakes" class="picSame">
+        <img src="{{ url_for('static', filename='images/cookiestab.jpg') }}" alt="cookies" class="picSame">
+        <img src="{{ url_for('static', filename='images/meatstab.jpg') }}" alt="meats & others" class="picSame">
+    </div>
+    <h2 class="subs"><pre>                                         Cakes                 Cookies            Meats & Others</pre></h2>
+    <h2 style="text-align: center;">
+        <input type="button" name="seemore" value="See More" class="styled-button" onclick="window.location.href='{{ url_for('recipes_page') }}'">
+
+    </h2>
+
+    <div style="background-color: darkolivegreen">
+        <h2 class="footer"><pre>Discover Festive 
+    Christmas Delights!</pre></h2>
+        <table>
+            <tr>
+                <td>
+                    <img src="{{ url_for('static', filename='images/pretzels.jpg') }}" alt="pretzels" class="pic4">
+                </td>
+                <td class="summary"><pre>Holiday Bites is your go-to destination for 
+discovering a wide array of Christmas recipes 
+that will delight your taste buds and bring
+festive cheer to your home. With our advanced 
+filter feature, finding the perfect recipe is 
+a breeze. Join our community of food enthusiasts 
+and experience the joy of Christmas cooking 
+like never before.
+        
+<p style="text-align: center;">
+    <input type="button" name="learnmore" value="Learn More" class="styled-button2" onclick="window.location.href='{{ url_for('reviews_page') }}'">
+
+</p></pre></td>
+            </tr> 
+        </table>      
+    </div>
+</body>
+</html>
